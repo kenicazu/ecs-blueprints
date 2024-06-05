@@ -1,13 +1,15 @@
-FROM public.ecr.aws/docker/library/alpine:latest
+# FROM public.ecr.aws/docker/library/alpine:latest
 
-RUN apk add --no-cache python3 py3-pip && \
-python3 -m venv /path/to/venv
+# RUN apk add --no-cache python3 py3-pip && \
+# python3 -m venv /path/to/venv
 
-ENV PATH="/path/to/venv/bin:$PATH"
+# ENV PATH="/path/to/venv/bin:$PATH"
 
-WORKDIR /app
-ADD . /app
+# WORKDIR /app
+# ADD . /app
 
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt
 
-CMD ["python3", "app.py"]
+# CMD ["python3", "app.py"]
+
+FROM apache:latest
